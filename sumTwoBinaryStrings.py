@@ -1,10 +1,13 @@
+a = "1111111111"
+b = "1010101010"
+
 def add_binary(a,b):
 	maxlen = max(len(a), len(b))
 
 	#Normalize lengths
    	a = a.zfill(maxlen)
 	b = b.zfill(maxlen)
-	print a, b
+	print " " + a + "\n+" + b
 	
 	result = ''
 	carry  = 0
@@ -13,12 +16,11 @@ def add_binary(a,b):
 
 	while (i >= 0):
 		r = carry
-		print a[i], b[i]
 
 		if a[i] == '1':
-			r = r + 1 + carry
+			r = r + 1
 		if b[i] == '1':
-			r = r + 1 + carry
+			r = r + 1
 
 		i = i - 1
 
@@ -31,13 +33,10 @@ def add_binary(a,b):
 			carry = 1
 		else:
 			carry = 0
-
      
 	if carry == 1:
-		result = result + "1"
+		result = "1" + result
 
 	return result
 
-a = "1010"
-b = "101"
-print add_binary(a,b)
+print "------------\n" + add_binary(a,b)
