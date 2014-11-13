@@ -3,7 +3,6 @@ class sumCoins:
     def __init__(self, coins_array):
         self.coins = coins_array
         
-
     def getMinCoins(self, sum_coins):
     	min_coins = 0
     	total     = 0

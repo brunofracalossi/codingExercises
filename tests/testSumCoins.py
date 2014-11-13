@@ -27,3 +27,7 @@ class TestCoinsSum(TestCase):
     def test_simple_sum_5(self):
         coins = [1]
         self.assertEquals(42, sumCoins(coins).getMinCoins(42))
+
+    def test_simple_sum_6(self):
+        coins = [1,5,10,50,60,1000]
+        self.assertEquals(2, sumCoins(coins).getMinCoins(1001))
